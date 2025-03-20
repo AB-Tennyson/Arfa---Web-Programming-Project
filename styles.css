@@ -121,3 +121,53 @@ footer {
   text-align: center;
   padding: 20px 0;
 }
+
+/* New Styles for Sign Up, Sign In, and Forgot Password Forms */
+.form-section {
+  padding: 50px 0;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-top: 50px;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button.cta-button {
+  background-color: teal;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button.cta-button:hover {
+  background-color: darkcyan;
+}
+
+form p {
+  font-size: 14px;
+}
+
+form a {
+  text-decoration: none;
+  color: teal;
+}
+
+form a:hover {
+  text-decoration: underline;
+}
