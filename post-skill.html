@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add New Skill - SkillSwap</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Include Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>SkillSwap</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="portfolio.html">About</a></li>
+            <li><a href="portfolio.html">Contact</a></li>
+            <li><a href="SignIn.html" class="btn">Log Out</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Post New Skill Form -->
+    <section class="form-section py-5">
+      <div class="container">
+        <h2>Post a New Skill</h2>
+        <form id="post-skill-form">
+          <!-- Skill Name -->
+          <div class="mb-3">
+            <label for="skill-name" class="form-label">Skill Name</label>
+            <input
+              type="text"
+              id="skill-name"
+              name="skill-name"
+              class="form-control"
+              required
+            />
+          </div>
+
+          <!-- Category -->
+          <div class="mb-3">
+            <label for="category" class="form-label">Category</label>
+            <select id="category" name="category" class="form-select" required>
+              <option value="Programming">Programming</option>
+              <option value="Design">Design</option>
+              <option value="Photography">Photography</option>
+              <option value="Fitness">Fitness</option>
+              <option value="Writing">Writing</option>
+              <option value="Music">Music</option>
+            </select>
+          </div>
+
+          <!-- Skill Description -->
+          <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea
+              id="description"
+              name="description"
+              class="form-control"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="cta-button btn btn-primary">
+            Post Skill
+          </button>
+          <br /><br />
+          <p><a href="dashboard.html">Back to Dashboard</a></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Include Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Handle the form submission
+      document
+        .getElementById("post-skill-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent the form from submitting the usual way
+
+          const skillName = document.getElementById("skill-name").value;
+          const category = document.getElementById("category").value;
+          const description = document.getElementById("description").value;
+
+          // For now, we'll just show an alert with the submitted information
+          alert(
+            `New Skill Posted: \nName: ${skillName} \nCategory: ${category} \nDescription: ${description}`
+          );
+
+          // Optionally, you could send this data to a backend here
+        });
+    </script>
+  </body>
+</html>
